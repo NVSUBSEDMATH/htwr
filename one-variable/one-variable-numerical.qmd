@@ -29,7 +29,7 @@ library(ggstatsplot)
 library(downlit)
 
 # load data
-data(iris)
+data(iris) # storing the data as iris
 ```
 
 ## Edgar Anderson's Iris Data

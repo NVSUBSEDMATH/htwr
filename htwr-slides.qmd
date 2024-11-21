@@ -5,7 +5,7 @@ date: today
 format:
   revealjs:
     mainfont: "Cormorant Garamond"
-    footer: <https://mild-orville.quarto.pub/intro2quarto/>
+    footer: <https://mild-orville.quarto.pub/hypothesis-testing-with-r/>
     logo: images/logo-cte-nvsu.png
     embed-resources: true
 editor: visual
@@ -13,9 +13,11 @@ css: style.css
 bibliography: references.bib
 ---
 
-## Scan me for slides!
+## Scan me for the slides!
 
+![](images/slides.png){fig-align="center" height="400"}
 
+<center><https://mild-orville.quarto.pub/hypothesis-testing-with-r/></center>
 
 ## Hi!
 
@@ -145,7 +147,7 @@ Use a hypothesis test to test the *null hypothesis*, $H_0$ versus the *alternati
 ## Why R? {auto-animate="true"}
 
 ::: {.fragment .grow .highlight-current-blue}
-1. Wide range of statistical tests.
+1. Wide range of statistical tests
 :::
 
 ::: {.fragment .grow .highlight-current-blue}
@@ -175,11 +177,11 @@ Use a hypothesis test to test the *null hypothesis*, $H_0$ versus the *alternati
 :::
 
 ::: {.fragment .grow .highlight-current-blue}
-9. Free and open-source
+8. Free and open-source
 :::
 
 ::: {.fragment .grow .highlight-current-blue}
-10. Vibrant R user community
+9. Vibrant R user community
 :::
 
 ## Scan me!

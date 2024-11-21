@@ -1,0 +1,134 @@
+---
+title: "Using R"
+author: Orville D. Hombrebueno
+date: today
+format:
+  html:
+    embed-resources: true
+editor: visual
+toc: true
+code-link: true
+code-fold: true
+cache: true
+---
+
+# The Data
+
+```{r}
+#| label: preliminaries
+#| warning: false
+#| message: false
+
+# load packages
+library(tidyverse) 
+library(knitr)
+library(gtsummary)
+library(ggstatsplot)
+library(downlit)
+
+# load the data
+data <- tibble(
+  Response = c(rep("Yes", 20), rep("No", 20))
+)
+```
+
+## Preference in Using R
+
+This data is collected during the ...
+
+The first 6 rows of the data is shown in @tbl-preference.
+
+```{r}
+#| label: tbl-preference
+#| warning: false
+#| message: false
+#| tbl-cap: "The first 6 observations of the data set."
+
+data |> # calling the data
+  head() |> # getting the first six rows of the data
+  kable() # creating a table
+```
+
+## Descriptive Statistics
+
+The frequency distribution of the variable in the data set is shown in @tbl-summary.
+
+```{r}
+#| label: tbl-summary
+#| tbl-cap: "Summary statistics of the data set."
+#| message: false
+
+data |> # calling the data
+  tbl_summary() 
+```
+
+# Hypothesis Testing
+
+::: panel-tabset
+## Two-Sided
+
+### Research Question
+
+Do the participants have a 50/50 chance of preferring to use R?
+
+### Hypothesis and Test Statistics
+
+-   $H_0:p=50\%$; proportions of preferring to use R are equal.
+
+-   $H_a:p\ne50\%$; proportions of preferring to use R are different.
+
+-   Significance level, $\alpha=5\%$.
+
+-   **chi-squared goodness of fit test**
+
+-   Success-failure condition is met.
+
+### Results and Interpretation
+
+The pie chart and test statistics is shown on @fig-test. Based on the pie chart and the *p*-value being lesser than 5% (*p*-value = .001), we reject the null hypothesis. There is a strong evidence that the proportion of surviving is different among passengers. This may be influenced by certain factors like class, gender, or age?
+
+```{r}
+#| label: fig-test
+#| fig-cap: Pie chart and test statistics.
+
+ggpiestats( # creating the figure
+  data = data, # data
+  x = Response, # variable
+  bf.message = FALSE, # Bayes Factor
+  legend.title = "Use R?" # legend name
+)
+```
+
+## One-Sided
+
+### Research Question
+
+Is the preference of using R greater than the expected preference proportion of 50%?
+
+### Hypothesis and Test Statistics
+
+-   $H_0:p=50\%$; the preference of using R is equal to the expected preference proportion of 50%.
+
+-   $H_a:p>50\%$; the preference of using R is greater than the expected preference proportion of 50%.
+
+-   Significance level, $\alpha=5\%$.
+
+-   **one proportion Z-test**
+
+- Success-failure condition is met.
+
+### Results and Interpretation
+
+```{r}
+#| label: test-os
+
+prop.test(
+  x = 711, # number of successes
+  n = 2201, # total number of trials (711 + 1490)
+  p = 0.35, # expected preference proportion
+  alternative = "greater" # other options: "two.sided" or "less"
+)
+```
+
+The test statistics is shown above. Based on the results and the *p*-value being lesser than 5% (*p*-value = 0.004), we reject the null hypothesis. There is strong evidence that the survival rate is less than the expected survival rate of 35%.
+:::

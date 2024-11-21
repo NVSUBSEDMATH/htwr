@@ -1,0 +1,4 @@
+- source: htwr-slides.qmd
+  quarto-pub:
+    - id: 4c0c1ead-dc22-4115-adab-1f5304f9d8ed
+      url: 'https://mild-orville.quarto.pub/hypothesis-testing-with-r'
