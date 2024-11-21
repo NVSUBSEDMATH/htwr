@@ -69,7 +69,7 @@ No checking of assumptions. Statistical Inference.
 :::
 
 ::: {.fragment .grow .highlight-current-blue}
-- perform live demonstrations.
+- perform hypothesis testing in R.
 :::
 
 ::: {.fragment .grow .highlight-current-blue}
