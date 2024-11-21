@@ -1,0 +1,212 @@
+---
+title: "Hypothesis Testing with R"
+author: ORVILLE D. HOMBREBUENO
+date: today
+format:
+  revealjs:
+    mainfont: "Cormorant Garamond"
+    footer: <https://mild-orville.quarto.pub/intro2quarto/>
+    logo: images/logo-cte-nvsu.png
+    embed-resources: true
+editor: visual
+css: style.css
+bibliography: references.bib
+---
+
+## Scan me for slides!
+
+
+
+## Hi!
+
+My name is Orville D. Hombrebueno. I am a Math teacher at the College of Teacher Education.
+
+![](images/orville2.jpg){fig-align="center" height="300"}
+
+<center>{{< fa brands square-x-twitter size=1.4xl >}} [odhombrebueno](https://x.com/odhombrebueno) \| {{< fa brands mastodon size=1.4xl >}} [mildorville](https://fosstodon.org/@mildorville) \| {{< fa brands github size=1.4xl >}} [ellivromvvn](https://github.com/ellivromvvn)</center>
+
+::: {.notes}
+Introduce yourself. Thanks. The collaboration with sir Jubert. MMS
+:::
+
+## This talk will not {auto-animate="true"}
+
+::: {.fragment .grow .highlight-current-red}
+- dive into deep terms and concepts in hypothesis testing. 
+:::
+
+::: {.fragment .grow .highlight-current-red}
+- show and discuss computation by hand of test statistics.
+:::
+
+::: {.fragment .grow .highlight-current-red}
+- discuss decision errors.
+:::
+
+::: {.fragment .grow .highlight-current-red}
+- discuss statistical power of a hypothesis tests.
+:::
+
+
+::: {.notes}
+No checking of assumptions. Statistical Inference.
+:::
+
+## This talk will {auto-animate="true"}
+
+::: {.fragment .grow .highlight-current-blue}
+- define hypothesis testing.
+:::
+
+::: {.fragment .grow .highlight-current-blue}
+- discuss the steps in hypothesis testing.
+:::
+
+::: {.fragment .grow .highlight-current-blue}
+- discuss why R?
+:::
+
+::: {.fragment .grow .highlight-current-blue}
+- perform live demonstrations.
+:::
+
+::: {.fragment .grow .highlight-current-blue}
+- give resources.
+:::
+
+## Hypothesis testing {auto-animate="true"}
+
+::: {.fragment}
+A hypothesis test is a statistical technique used to evaluate competing claims using data [@diez22].
+::: 
+
+::: {.fragment}
+- On average, NVSU faculty members are finishing their PhDs in less than 7 years.
+:::
+
+::: {.fragment}
+- There are more female than male who are confident in doing hypothesis testing.
+:::
+
+::: {.fragment}
+- The performance of the students in their statistics class improved after using R and RStudio.
+:::
+
+## Hypothesis testing
+
+<br>
+
+Use a hypothesis test to test the *null hypothesis*, $H_0$ versus the *alternative hypothesis* $H_A$ at a particular *significance level,* $\alpha$.
+
+## Hypothesis testing: a five step process {auto-animate="true"}
+
+<br>
+
+::: {.fragment}
+1. *Identify*: Identify the hypotheses and the significance level.
+:::
+
+## Hypothesis testing: a five step process {auto-animate="true"}
+
+<br>
+
+2. *Choose*: Choose the appropriate test procedure and identify it by name.
+
+## Hypothesis testing: a five step process {auto-animate="true"}
+
+<br>
+
+3. *Check*: Check that the conditions for the test procedure are met.
+
+## Hypothesis testing: a five step process {auto-animate="true"}
+
+<br>
+ 
+4. *Calculate*: Calculate the test statistic and the *p*-value.
+
+## Hypothesis testing: a five step process {auto-animate="true"}
+
+<br>
+
+5. *Conclude*: Compare the *p*-value to the significance level to determine whether to reject $H_0$ or not reject $H_0$. Draw a conclusion in the context of $H_A$.
+
+## Hypothesis testing: a five step process {auto-animate="true"}
+
+1. *Identify*
+
+2. *Choose*
+
+3. *Check*
+
+4. *Compute*
+
+5. *Conclude*
+
+## Why R? {auto-animate="true"}
+
+::: {.fragment .grow .highlight-current-blue}
+1. Wide range of statistical tests.
+:::
+
+::: {.fragment .grow .highlight-current-blue}
+2. Flexibility in handling data
+:::
+
+::: {.fragment .grow .highlight-current-blue}
+3. Visualization
+:::
+
+::: {.fragment .grow .highlight-current-blue}
+4. Automation
+:::
+
+::: {.fragment .grow .highlight-current-blue}
+5. Dynamic documents
+:::
+
+## Why R? {auto-animate="true"}
+
+::: {.fragment .grow .highlight-current-blue}
+6. Posit Cloud
+:::
+
+::: {.fragment .grow .highlight-current-blue}
+7. Reproducibility
+:::
+
+::: {.fragment .grow .highlight-current-blue}
+9. Free and open-source
+:::
+
+::: {.fragment .grow .highlight-current-blue}
+10. Vibrant R user community
+:::
+
+## Scan me!
+
+![](images/posit-cloud.png){fig-align="center" height="400"}
+
+<center><https://posit.cloud/content/9299336></center>
+
+## Resources
+
+::: panel-tabset
+
+## Hypothesis Testing
+
+1.  [What statistical test should I do?](https://statsandr.com/blog/what-statistical-test-should-i-do/images/overview-statistical-tests-statsandr.svg?fbclid=IwY2xjawF8ObZleHRuA2FlbQIxMQABHWrFzjaktygTzxnmv0QON37VHMdH2kR1ubCwNWTaasmH3AFkI8y_gboniQ_aem_cKotRBqSnl7jnXGjLh4HXg) by Antonine Soetewey
+2. [Advanced High School Statistics](https://runestone.academy/ns/books/published/ahss3rd/frontmatter.html) by David M Diez, Mine Çetinkaya-Rundel, Leah Dorazio, and Christopher D Barr
+
+## Learn R
+
+[Big Book of R](https://www.bigbookofr.com/) by Oscar Baruffa
+
+:::
+
+# Thank you!
+
+<br>
+
+odhombrebueno@nvsu.edu.ph
+
+## References
