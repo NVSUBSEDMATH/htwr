@@ -28,13 +28,13 @@ library(downlit)
 
 # load the data
 data <- tibble(
-  Response = c(rep("Yes", 20), rep("No", 20))
+  Response = c(rep("Yes", 22), rep("No", 3))
 )
 ```
 
 ## Preference in Using R
 
-This data is collected during the ...
+This data is collected during the 2024 Research Forum of the College of Teacher Education in the Hypothesis Testing with R talk of Orville Hombrebueno. The participants were asked if they would prefer to use R in the future in performing statistical tests? There is only one variable, Response, with their "Yes" or "No" answers. There were 22 participants who answered "Yes" and 3 who answered "No".
 
 The first 6 rows of the data is shown in @tbl-preference.
 
@@ -51,7 +51,7 @@ data |> # calling the data
 
 ## Descriptive Statistics
 
-The frequency distribution of the variable in the data set is shown in @tbl-summary.
+The frequency distribution of the variable Response in the data set is shown in @tbl-summary. Majority answered "Yes".
 
 ```{r}
 #| label: tbl-summary
@@ -85,7 +85,7 @@ Do the participants have a 50/50 chance of preferring to use R?
 
 ### Results and Interpretation
 
-The pie chart and test statistics is shown on @fig-test. Based on the pie chart and the *p*-value being lesser than 5% (*p*-value = .001), we reject the null hypothesis. There is a strong evidence that the proportion of surviving is different among passengers. This may be influenced by certain factors like class, gender, or age?
+The pie chart and test statistics is shown on @fig-test. Based on the pie chart and the *p*-value being lesser than 5% (*p*-value = .001), we reject the null hypothesis. There is a strong evidence that the proportion of preferring to use R in the future is different among participants. This may be influenced by certain factors.
 
 ```{r}
 #| label: fig-test
@@ -123,12 +123,12 @@ Is the preference of using R greater than the expected preference proportion of 
 #| label: test-os
 
 prop.test(
-  x = 711, # number of successes
-  n = 2201, # total number of trials (711 + 1490)
-  p = 0.35, # expected preference proportion
+  x = 22, # number of successes
+  n = 25, # total number of trials (711 + 1490)
+  p = 0.50, # expected preference proportion
   alternative = "greater" # other options: "two.sided" or "less"
 )
 ```
 
-The test statistics is shown above. Based on the results and the *p*-value being lesser than 5% (*p*-value = 0.004), we reject the null hypothesis. There is strong evidence that the survival rate is less than the expected survival rate of 35%.
+The test statistics is shown above. Based on the results and the *p*-value being lesser than 5% (*p*-value = 0.001), we reject the null hypothesis. There is strong evidence that the proportion of preferring to use R in the future is greater than the expected preference proportion of 50%.
 :::
